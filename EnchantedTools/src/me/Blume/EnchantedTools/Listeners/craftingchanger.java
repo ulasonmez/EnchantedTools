@@ -210,7 +210,52 @@ public class craftingchanger implements Listener {
 					meta.addEnchant(Enchantment.FIRE_ASPECT, level1, true);
 					item.setItemMeta(meta);
 				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.WOODEN_HOE))) {
 
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+1;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					item.setItemMeta(meta);
+				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.STONE_HOE))) {
+
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+6;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					item.setItemMeta(meta);
+				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.GOLDEN_HOE))) {
+
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+11;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					level = rand.nextInt(5)+1;
+					meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, level, true);
+					item.setItemMeta(meta);
+				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.IRON_HOE))) {
+
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+11;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					level = rand.nextInt(5)+6;
+					meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, level, true);
+					item.setItemMeta(meta);
+				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.DIAMOND_HOE))) {
+
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+16;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					level = rand.nextInt(5)+11;
+					meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, level, true);
+					item.setItemMeta(meta);
+				}
 			}
 		}
 		else if(event.getInventory().getType().equals(InventoryType.SMITHING)) {
@@ -253,8 +298,16 @@ public class craftingchanger implements Listener {
 					meta.addEnchant(Enchantment.KNOCKBACK, level1, true);
 					item.setItemMeta(meta);
 				}
+				else if(event.getCurrentItem().equals(new ItemStack(Material.NETHERITE_HOE))) {
+					ItemStack item = event.getCurrentItem();
+					ItemMeta meta = item.getItemMeta();
+					level = rand.nextInt(5)+21;
+					meta.addEnchant(Enchantment.DIG_SPEED, level, true);
+					level = rand.nextInt(5)+16;
+					meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, level, true);
+					item.setItemMeta(meta);
+				}
 			}
 		}
 	}
-
 }
